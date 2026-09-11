@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Senna Yamamoto | Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <img src="assets/profile.jpg" alt="Senna Yamamoto" class="profile-img" />
+    <div class="header-content">
+      <h1>Senna Yamamoto</h1>
+      <h2 class="subtitle">Computer Science and Engineering @ UC, Davis</h2>
+      <p class="bio">
+        Hi, I'm Senna! I'm interested in embedded systems, and working at the intersection of hardware and software. I have experience writing bare-metal drivers for a CubeSat and testing semiconductor devices, and am open to exploring new fields as well!
+      </p>
+      <a href="https://www.linkedin.com/in/senna-yamamoto" target="_blank" class="link-btn">LinkedIn</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="projects">
+      <h2>Projects & Research</h2>
+
+      <!-- Tesla -->
+      <details class="project-item">
+        <summary>
+          <img src="assets/tesla.png" alt="Tesla Logo" class="project-thumb" />
+          <div class="summary-info">
+            <h3>Energy Battery Firmware</h3>
+            <p class="organization">Tesla</p>
+          </div>
+        </summary>
+        <div class="expanded-content">
+          <p>
+            Incoming intern to develop low-level embedded systems and validation infrastructure for battery management and charging software. 
+          </p>
+        </div>
+      </details>
+
+      <!-- Space and Satellite Systems -->
+      <details class="project-item">
+        <summary>
+          <img src="assets/cubesat.png" alt="CubeSat" class="project-thumb" />
+          <div class="summary-info">
+            <h3>REALOP CubeSat</h3>
+            <p class="organization">Space and Satellite Systems</p>
+          </div>
+        </summary>
+        <div class="expanded-content">
+          <p>
+            I developed bare-metal embedded drivers using C on STM32 microcontrollers for the REALOP CubeSat. I led the embedded software team in developing IntelliSat, our main flight computer, controlling and scheduling various peripherals on our satellite. My main contributions involve almost the entirety of the Radio MCU, as well as I2C drivers and watchdog on the PFC. 
+          </p>
+          <div class="embedded-media">
+            <!-- Example of an embedded diagram/photo -->
+            <img src="assets/peripherals.png" alt="Flight Computer Architecture Diagram" />
+            <figcaption>Architecture diagram of IntelliSat</figcaption>
+          </div>
+          <div class="embedded-media">
+            <!-- Example of an embedded diagram/photo -->
+            <img src="assets/radio.png" alt="Radio MCU Architecture Diagram" />
+            <figcaption>Architecture diagram of the Radio MCU.</figcaption>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Space-and-Satellite-Systems-UC-Davis/IntelliSat" target="_blank">PFC Repository</a>
+            <a href="https://github.com/Space-and-Satellite-Systems-UC-Davis/REALOP_Radio_Controller" target="_blank">Radio MCU Repository</a>
+          </div>
+        </div>
+      </details>
+
+      <!-- LLNL -->
+      <details class="project-item">
+        <summary>
+          <img src="assets/llnl_logo.jpg" alt="LLNL Logo" class="project-thumb" />
+          <div class="summary-info">
+            <h3>WBG/UWBG Photoconductive Switches</h3>
+            <p class="organization">Lawrence Livermore National Laboratory</p>
+          </div>
+        </summary>
+        <div class="expanded-content">
+          <p>
+            Under the mentorship of Dr. Bikramjit Chatterjee, I conductued R&D experiments to test the effectiveness of doped GaN and AlN as photoconductive switches by capturing Raman and PL spectra as well as pulsed and steady-state IV responses of the devices. Key findings were summarized and presented in poster format, and a manuscript will hopefully be submitted by the end of the year.
+          </p>
+          <div class="embedded-media">
+            <!-- Example of embedding a poster -->
+            <iframe src="assets/Senna_Yamamoto_Poster.pdf" width="100%" height="500px" style="border: 1px solid #ccc;"></iframe>
+          </div>
+          <div class="project-links">
+            <a href="assets/Senna_Yamamoto_Poster.pdf" target="_blank">Full Poster PDF</a>
+          </div>
+        </div>
+      </details>
+
+      <!-- OC Public Works -->
+      <details class="project-item">
+        <summary>
+          <img src="assets/ocpw.png" alt="OCPW Logo" class="project-thumb" />
+          <div class="summary-info">
+            <h3>Flood & Fire Dashboard</h3>
+            <p class="organization">Orange County Public Works, OC Survey</p>
+          </div>
+        </summary>
+        <div class="expanded-content">
+          <p>
+            In this internship, I utilized LiDAR, drones, and total stations to collect GIS data, then used Python and ArcGIS to automate the processing and visualization of the data. I then created  dashboards to inform the public about floor and fire risks in the OC area, which was cited in an IEEE research paper. 
+          </p>
+          <div class="embedded-media">
+            <!-- Example of an embedded diagram/photo -->
+            <img src="assets/flood_dashboard.png" alt="Floor Dashboard Image" />
+            <figcaption>Screenshot of flood dashboard.</figcaption>
+          </div>
+          <div class="project-links">
+            <a href="https://www.arcgis.com/apps/dashboards/ab56db531b4d4b17ae91b33d8f588186#" target="_blank">OC Flood Dashboard</a>
+            <a href="https://data-ocpw.opendata.arcgis.com/apps/6550c3ecf1be47b9bc6e11a3c409b189" target="_blank">OC Fire Severity Checker</a>
+            <a href="https://ieeexplore.ieee.org/abstract/document/10365478" target="_blank">IEEE Research Paper</a>
+          </div>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Senna Yamamoto.</p>
+  </footer>
+
+</body>
+</html>

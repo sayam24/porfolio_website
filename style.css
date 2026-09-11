@@ -1,0 +1,221 @@
+/* Minimalist Black & White Theme */
+:root {
+  --bg-color: #fafafa; /* Off-white background */
+  --text-color: #111111; /* Soft black text */
+  --border-color: #dddddd;
+  --hover-bg: #f0f0f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 2rem 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  align-items: center; /* Centers the image vertically next to the text */
+  gap: 2rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 3rem;
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px; /* Matching width and height makes it a perfect square */
+  object-fit: cover; /* Prevents your photo from being distorted */
+  border-radius: 6px; /* Softens the corners slightly; use 50% if you want a circle */
+  border: 1px solid var(--border-color);
+}
+
+.header-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #555555;
+  margin-bottom: 1rem;
+}
+
+.bio {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #333333;
+}
+
+.link-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.link-btn:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+/* Typography */
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+/* Expandable Project Section */
+.project-item {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* Adds a "+" icon to the far right of the project summary */
+.project-item summary::after {
+  content: 'Read More';
+  margin-left: auto; /* Pushes the text to the right side */
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Changes "Expand" to "Collapse" when the project is clicked open */
+.project-item[open] summary::after {
+  content: '−';
+  font-size: 1.2rem; /* Slightly larger so the minus sign is clear */
+  font-weight: 400;
+}
+
+.project-item summary {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  list-style: none; /* Removes default arrow in some browsers */
+  transition: background-color 0.2s ease;
+}
+
+.project-item summary::-webkit-details-marker {
+  display: none; /* Removes default arrow in Safari/Chrome */
+}
+
+.project-item summary:hover {
+  background-color: var(--hover-bg);
+}
+
+.project-thumb {
+  width: 80px;
+  height: 80px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+}
+
+.summary-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.organization {
+  font-size: 0.9rem;
+  color: #666666;
+}
+
+/* Expanded Content Area */
+.expanded-content {
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.expanded-content p {
+  margin-bottom: 1.5rem;
+  color: #333333;
+}
+
+.embedded-media {
+  margin-bottom: 1.5rem;
+}
+
+/* Embedded Media & Captions */
+.embedded-media figure {
+  margin: 0; /* Removes default browser spacing */
+  text-align: center; /* Centers the image and caption */
+}
+
+.embedded-media img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 0.5rem; /* Adds a little space between the image and the caption */
+}
+
+.embedded-media figcaption {
+  font-size: 0.85rem;
+  color: #666666; /* Lighter grey so it doesn't distract from the main text */
+  font-style: italic;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-links a {
+  color: var(--text-color);
+  text-decoration: underline;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.project-links a:hover {
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777777;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .project-item summary {
+    flex-direction: column;
+    text-align: center;
+  }
+}
