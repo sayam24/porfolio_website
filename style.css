@@ -1,7 +1,6 @@
-/* Minimalist Black & White Theme */
 :root {
-  --bg-color: #fafafa; /* Off-white background */
-  --text-color: #111111; /* Soft black text */
+  --bg-color: #fafafa;
+  --text-color: #111111; 
   --border-color: #dddddd;
   --hover-bg: #f0f0f0;
 }
@@ -25,7 +24,7 @@ body {
 /* Header Styles */
 header {
   display: flex;
-  align-items: center; /* Centers the image vertically next to the text */
+  align-items: center; 
   gap: 2rem;
   padding-bottom: 3rem;
   border-bottom: 1px solid var(--border-color);
@@ -34,9 +33,9 @@ header {
 
 .profile-img {
   width: 160px;
-  height: 160px; /* Matching width and height makes it a perfect square */
-  object-fit: cover; /* Prevents your photo from being distorted */
-  border-radius: 6px; /* Softens the corners slightly; use 50% if you want a circle */
+  height: 160px; 
+  object-fit: cover; 
+  border-radius: 6px; 
   border: 1px solid var(--border-color);
 }
 
@@ -91,10 +90,9 @@ h2 {
   overflow: hidden;
 }
 
-/* Adds a "+" icon to the far right of the project summary */
 .project-item summary::after {
   content: 'Read More';
-  margin-left: auto; /* Pushes the text to the right side */
+  margin-left: auto; 
   font-size: 0.85rem;
   font-weight: 600;
   color: #666666;
@@ -102,10 +100,9 @@ h2 {
   letter-spacing: 0.5px;
 }
 
-/* Changes "Expand" to "Collapse" when the project is clicked open */
 .project-item[open] summary::after {
   content: '−';
-  font-size: 1.2rem; /* Slightly larger so the minus sign is clear */
+  font-size: 1.2rem; 
   font-weight: 400;
 }
 
@@ -115,12 +112,12 @@ h2 {
   gap: 1.5rem;
   padding: 1rem;
   cursor: pointer;
-  list-style: none; /* Removes default arrow in some browsers */
+  list-style: none; 
   transition: background-color 0.2s ease;
 }
 
 .project-item summary::-webkit-details-marker {
-  display: none; /* Removes default arrow in Safari/Chrome */
+  display: none; 
 }
 
 .project-item summary:hover {
@@ -162,8 +159,8 @@ h2 {
 
 /* Embedded Media & Captions */
 .embedded-media figure {
-  margin: 0; /* Removes default browser spacing */
-  text-align: center; /* Centers the image and caption */
+  margin: 0; 
+  text-align: center; 
 }
 
 .embedded-media img {
@@ -171,13 +168,14 @@ h2 {
   height: auto;
   border-radius: 4px;
   border: 1px solid var(--border-color);
-  margin-bottom: 0.5rem; /* Adds a little space between the image and the caption */
+  margin-bottom: 0.5rem; 
 }
 
 .embedded-media figcaption {
   font-size: 0.85rem;
-  color: #666666; /* Lighter grey so it doesn't distract from the main text */
+  color: #666666; 
   font-style: italic;
+  text-align: center; 
 }
 
 .project-links {
